@@ -6,6 +6,10 @@
   <% end %>
 </p>
 
+<% if @article.image.exists? %>
+  <p><%= image_tag @article.image.url, style: 'width:50%;' %></p>
+<% end %>
+
 <p><%= @article.body %></p> <br>
 
 <h3>Comments (<%= @article.comments.size %>)</h3>
